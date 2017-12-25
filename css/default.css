@@ -1,0 +1,125 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+marquee {
+  width: 30%;
+}
+
+h2 {
+  font-family: "Algerian";
+}
+
+button.btn {
+  margin: 2% 30%;
+}
+
+#resetDiv {
+  display: flex;
+}
+
+.container .description p {
+  color: #ff0;
+  font-family: "Algerian";
+  font-size: xx-large;
+  width: 75%;
+  margin: 25% auto;
+  background: rgba(125, 0, 0, 0.5);
+  border-radius: 20px;
+}
+
+.box    {  
+  display: inline-block;
+  width:20%;
+  height:100px;
+  box-shadow: inset 1px 1px 40px 0 rgba(0,0,0,.45);
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  margin:1% auto 0 auto; 
+  border-radius:5px;
+  overflow:hidden;
+  position: relative;
+}
+
+.box img {
+  display: block;
+  max-width: 100%;
+  height: -webkit-fill-available;
+  margin: 0 auto;
+}
+
+.overlay    {
+  position: absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  background:rgba(0,0,0,.75);
+  text-align:center;
+  opacity:0;
+  -webkit-transition: opacity .25s ease;
+}
+
+.box:hover .overlay {
+  opacity:0.5;
+}
+
+.overlay .plus:before { 
+  cursor: pointer;
+  content:"+";
+  margin: 0;
+  padding: 100%;
+  position: absolute;
+  top:45%;
+  left:50%;
+  font-family:Helvetica;
+  font-weight:900;
+  color:rgba(255,255,255,.85);
+  font-size:18rem;
+  -webkit-transform:translate(-50%, -50%);
+  transform:translate(-50%, -50%);
+}
+
+
+.overlay.clicked .plus:before {
+  content:"-";
+}
+
+.description {
+  display: block;
+  position: absolute;
+  width:100%;
+  height:100%;
+  background: url(../images/favicon.jpg) round;
+  border: 1px dashed #555;
+  bottom:-100%;
+  text-align: center;
+  transition: bottom 0.25s ease;
+}
+
+.overlay.clicked + .description {
+  bottom:0%;
+}
+
+.overlay.clicked + .description:after {
+  -webkit-transform:translate(-50%, -100%);
+}
+
+.container {
+  float: left;
+  width: 50%;
+}
+
+footer {
+  background: #15224f;
+  color: #fff;
+  display: inline-block;
+  margin-top: 25px;
+  width: 100%;
+}
+
+footer p {
+  margin: 5px auto;
+}
